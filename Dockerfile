@@ -1,36 +1,36 @@
 FROM php:8.2-fpm
 
-# 安装系统依赖
+# 1. 安装系统底层依赖 (Imagick, GD, intl 必须)
 RUN apt-get update && apt-get install -y \
-    libmagickwand-dev libicu-dev libzip-dev zip unzip git curl \
+    libmagickwand-dev \
+    libicu-dev \
+    libzip-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    zip \
+    unzip \
+    git \
+    curl \
     --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-# 安装 PHP 标准扩展
-RUN docker-php-ext-install intl zip bcmath gd mysqli pdo_mysql
+# 2. 安装 PHP 核心扩展
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) intl zip bcmath gd mysqli pdo_mysql
 
-# 安装 ImageMagick 和 Redis
-RUN pecl install imagick redis && docker-php-ext-enable imagick redis
+# 3. 安装 Redis 和 ImageMagick (这两个安装很快)
+RUN pecl install redis imagick \
+    && docker-php-ext-enable redis imagick
 
-# 安装 ionCube Loader
+# 4. 安装 ionCube Loader (PHP 8.2 专用)
 RUN curl -fSL https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz -o ioncube.tar.gz \
     && tar -xzf ioncube.tar.gz \
     && cp ioncube/ioncube_loader_lin_8.2.so $(php -r "echo ini_get('extension_dir');") \
     && echo "zend_extension=ioncube_loader_lin_8.2.so" > /usr/local/etc/php/conf.d/00-ioncube.ini \
     && rm -rf ioncube.tar.gz ioncube
 
-# --- 编译安装多版本 Swoole ---
+# 暂时不安装 Swoole，确保构建成功率
+# RUN pecl install swoole
 
-# 1. 编译 Swoole 4.8.x (适合旧项目)
-RUN pecl install swoole-4.8.12 && mv $(php -r "echo ini_get('extension_dir');")/swoole.so $(php -r "echo ini_get('extension_dir');")/swoole4.so
-
-# 2. 编译 Swoole 5.x (当前主流)
-RUN pecl install swoole-5.1.1 && mv $(php -r "echo ini_get('extension_dir');")/swoole.so $(php -r "echo ini_get('extension_dir');")/swoole5.so
-
-# 3. 编译 Swoole 6.x (预览/最新)
-# 注意：如果 pecl 还没有正式版，可能需要从源码编译，这里先演示 6.0.0-alpha
-RUN pecl install swoole-6.0.0 && mv $(php -r "echo ini_get('extension_dir');")/swoole.so $(php -r "echo ini_get('extension_dir');")/swoole6.so
-
-# 默认启用 Swoole 5
-RUN echo "extension=swoole5.so" > /usr/local/etc/php/conf.d/docker-php-ext-swoole.ini
-
-WORKDIR /workspaces/${localWorkspaceFolderBasename}
+# 设置工作目录
+WORKDIR /workspaces/yinyue888
