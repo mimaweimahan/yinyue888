@@ -3,7 +3,7 @@
   "name": "PHP 8.2 Custom Env",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspaces/yinyue888",
   "forwardPorts": [80, 6379, 3306, 9501],
   "customizations": {
     "vscode": {
