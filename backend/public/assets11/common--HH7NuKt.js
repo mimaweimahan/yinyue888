@@ -1,0 +1,1 @@
+import{i as c,C as a,D as t}from"./index-4tvR8j1Z.js";const e=o=>{const{t:s}=c.global;if(!o)return!1;navigator.clipboard.writeText(o).then(()=>{a(s("common.copy_success"))}).catch(()=>{t(s("common.copy_fail"))})};export{e as c};

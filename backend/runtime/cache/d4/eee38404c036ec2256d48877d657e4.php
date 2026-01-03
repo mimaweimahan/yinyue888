@@ -1,0 +1,4 @@
+<?php
+//000000001440
+ exit();?>
+s:407:"a:1:{s:9:"user_auth";s:376:"MDAwMDAwMDAwML6sldmU3rmVimFiirS3sH7CnshhfoaUfayLxX2SY5vRyNN72om4uduHhX96q7fGdLWdt4aBnWWqw2rRh52sjNuyun+rfbmtk4ZhgqGvk6+cr2GzkYqsdqi7jcVsg4eAk7GWgtKBlbLDhp9zqrq60nbGdpahh512mq+hp6iSiZuVyLyc34K9tc6HYX6hr5OwmcOI3aGNhnlqw36rkY+GjNuyun+rfbnIppCbe6vEuNagw2SrfpWdoHu5oaqxmnp9usiZh8CAz9CSg4WVeau3xnS6nMl3mZ+CgLGPr6KGoInZvdOom4CsqrqGiKihr5Owfrd4sqmIoKB7x4ySqo+HibC5uYbfgbmyp4OFemauk7Nt";}";

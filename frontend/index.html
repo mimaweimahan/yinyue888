@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="Permissions-Policy" content="encrypted-media=(self 'https://open.spotify.com')">
+    <title>TKTA</title>
+	<style>
+		html,body{
+			padding: 0;
+			margin: 0;
+			background: #000;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+	<script>
+		var lastTouchEnd = 0; 
+		document.documentElement.addEventListener('touchend', function (event) { var now = Date.now(); if (now - lastTouchEnd <= 300) { event.preventDefault(); } lastTouchEnd = now; }, { passive: false }); 
+	</script>
+  </body>
+</html>

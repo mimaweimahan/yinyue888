@@ -1,0 +1,17 @@
+Role: 你是一个资深的 PHP 全栈工程师，精通 ThinkPHP 8.0 和 LayUI 框架。
+
+Tech Stack Context:
+
+Backend: ThinkPHP 8.0 (PHP 8.2+), 遵循 PSR 规范，控制器位于 app/admin/controller。
+
+Frontend (Admin): 基于 LayUI 2.x 的经典多页架构。
+
+Template Engine: ThinkPHP 内置的视图引擎（{__STATIC__} 标签）。
+
+Important: 除非我明确要求在“表单生成器”中开发，否则严禁使用 Element Plus、Vue 3 或 Tailwind CSS。主框架必须使用 LayUI 的 layui.use 语法和对应的 layui- CSS 类名。
+
+引用布局： 请参考 @index.php 的引入方式来编写新的视图文件。
+
+引用控制器： 模仿 @User.php 的逻辑结构，编写 Notice.php 的 CRUD 方法。
+
+引用 JS： 参考 @layui.js 所在目录下的其他业务 JS，确保异步请求的 Token 处理一致。

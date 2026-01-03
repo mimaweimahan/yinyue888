@@ -1,0 +1,420 @@
+// ============================================
+// 布局系统
+// 基于目标站点 app.youtube92s.com 的布局规范
+// ============================================
+
+@import './target-site-mapping.scss';
+
+// ============================================
+// 页面布局结构
+// ============================================
+
+// 页面容器（基于提取结果：430px 宽度）
+.page-container {
+  max-width: var(--ds-container-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--ds-bg-primary);
+  min-height: 100vh;
+}
+
+// 页面包装器（通用）
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--ds-bg-primary);
+  padding-bottom: 70px; // 为底部导航留出空间
+}
+
+// ============================================
+// Header 区域（顶部导航）
+// ============================================
+
+.header-wrapper {
+  width: 100%;
+  height: 64px;
+  padding: 0 var(--ds-spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ds-text-primary); // 黑色背景
+  position: relative;
+  
+  .app_logo {
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    img {
+      width: auto;
+      height: 33px;
+    }
+  }
+  
+  .lang-select {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+// ============================================
+// Main 内容区域
+// ============================================
+
+.page-main {
+  width: 100%;
+  min-height: calc(100vh - 64px - 50px); // 减去 header 和 footer
+  padding: var(--ds-spacing-md) var(--ds-spacing-sm);
+}
+
+// 内容区域（带背景）
+.content-box {
+  width: 100%;
+  padding: var(--ds-spacing-xl);
+  background-color: var(--ds-bg-primary);
+  border-radius: var(--ds-radius-card);
+  margin-bottom: var(--ds-spacing-md);
+}
+
+// ============================================
+// Footer 区域（底部导航）
+// ============================================
+
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: var(--ds-container-width);
+  margin: 0 auto;
+  height: 50px;
+  background-color: #1e2427;
+  box-shadow: var(--ds-shadow-nav);
+  z-index: 1000;
+}
+
+// ============================================
+// 卡片布局
+// ============================================
+
+// 卡片容器
+.card-container {
+  width: 100%;
+  padding: var(--ds-spacing-md);
+  background-color: var(--ds-bg-primary);
+  border-radius: var(--ds-radius-card);
+  box-shadow: var(--ds-shadow-card);
+  margin-bottom: var(--ds-spacing-md);
+}
+
+// 卡片列表（网格布局）
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--ds-spacing-md);
+  padding: var(--ds-spacing-md);
+}
+
+// 卡片列表（Flex 布局）
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-md);
+  padding: var(--ds-spacing-md);
+}
+
+// 卡片项
+.card-item {
+  display: flex;
+  padding: var(--ds-spacing-md);
+  background-color: var(--ds-bg-primary);
+  border-radius: var(--ds-radius-card);
+  border: 1px solid var(--ds-border);
+  transition: all var(--ds-duration-base) var(--ds-ease-in-out);
+  
+  &:hover {
+    box-shadow: var(--ds-shadow-md);
+    transform: translateY(-2px);
+  }
+}
+
+// ============================================
+// 列表布局
+// ============================================
+
+// 列表容器
+.list-container {
+  width: 100%;
+  padding: var(--ds-spacing-md);
+}
+
+// 列表项
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: var(--ds-spacing-md);
+  border-bottom: 1px solid var(--ds-border);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+// 列表项（水平布局）
+.list-item-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--ds-spacing-md);
+}
+
+// ============================================
+// 表单布局
+// ============================================
+
+// 表单容器
+.form-container {
+  width: 100%;
+  padding: var(--ds-spacing-xl);
+  background-color: var(--ds-bg-primary);
+}
+
+// 表单组
+.form-group {
+  margin-bottom: var(--ds-spacing-xl);
+  
+  .form-label {
+    display: block;
+    margin-bottom: var(--ds-spacing-sm);
+    font-size: var(--ds-font-size-base);
+    font-weight: var(--ds-font-weight-medium);
+    color: var(--ds-text-primary);
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+}
+
+// 表单行（多个输入框）
+.form-row {
+  display: flex;
+  gap: var(--ds-spacing-md);
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: var(--ds-spacing-xl);
+  }
+}
+
+// ============================================
+// 网格布局系统
+// ============================================
+
+// 2 列网格
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--ds-spacing-md);
+}
+
+// 3 列网格
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--ds-spacing-md);
+}
+
+// 4 列网格
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--ds-spacing-md);
+}
+
+// 响应式网格
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--ds-spacing-md);
+}
+
+// ============================================
+// Flex 布局系统
+// ============================================
+
+// Flex 容器
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Flex 对齐
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// Flex 间距
+.flex-gap-xs {
+  gap: var(--ds-spacing-xs);
+}
+
+.flex-gap-sm {
+  gap: var(--ds-spacing-sm);
+}
+
+.flex-gap-md {
+  gap: var(--ds-spacing-md);
+}
+
+.flex-gap-lg {
+  gap: var(--ds-spacing-lg);
+}
+
+.flex-gap-xl {
+  gap: var(--ds-spacing-xl);
+}
+
+// ============================================
+// 间距工具类
+// ============================================
+
+// Padding
+.p-0 { padding: 0 !important; }
+.p-xs { padding: var(--ds-spacing-xs) !important; }
+.p-sm { padding: var(--ds-spacing-sm) !important; }
+.p-md { padding: var(--ds-spacing-md) !important; }
+.p-lg { padding: var(--ds-spacing-lg) !important; }
+.p-xl { padding: var(--ds-spacing-xl) !important; }
+
+// Padding 水平
+.px-xs { padding-left: var(--ds-spacing-xs) !important; padding-right: var(--ds-spacing-xs) !important; }
+.px-sm { padding-left: var(--ds-spacing-sm) !important; padding-right: var(--ds-spacing-sm) !important; }
+.px-md { padding-left: var(--ds-spacing-md) !important; padding-right: var(--ds-spacing-md) !important; }
+.px-lg { padding-left: var(--ds-spacing-lg) !important; padding-right: var(--ds-spacing-lg) !important; }
+.px-xl { padding-left: var(--ds-spacing-xl) !important; padding-right: var(--ds-spacing-xl) !important; }
+
+// Padding 垂直
+.py-xs { padding-top: var(--ds-spacing-xs) !important; padding-bottom: var(--ds-spacing-xs) !important; }
+.py-sm { padding-top: var(--ds-spacing-sm) !important; padding-bottom: var(--ds-spacing-sm) !important; }
+.py-md { padding-top: var(--ds-spacing-md) !important; padding-bottom: var(--ds-spacing-md) !important; }
+.py-lg { padding-top: var(--ds-spacing-lg) !important; padding-bottom: var(--ds-spacing-lg) !important; }
+.py-xl { padding-top: var(--ds-spacing-xl) !important; padding-bottom: var(--ds-spacing-xl) !important; }
+
+// Margin
+.m-0 { margin: 0 !important; }
+.m-xs { margin: var(--ds-spacing-xs) !important; }
+.m-sm { margin: var(--ds-spacing-sm) !important; }
+.m-md { margin: var(--ds-spacing-md) !important; }
+.m-lg { margin: var(--ds-spacing-lg) !important; }
+.m-xl { margin: var(--ds-spacing-xl) !important; }
+
+// Margin 水平
+.mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.mx-xs { margin-left: var(--ds-spacing-xs) !important; margin-right: var(--ds-spacing-xs) !important; }
+.mx-sm { margin-left: var(--ds-spacing-sm) !important; margin-right: var(--ds-spacing-sm) !important; }
+.mx-md { margin-left: var(--ds-spacing-md) !important; margin-right: var(--ds-spacing-md) !important; }
+
+// Margin 垂直
+.my-xs { margin-top: var(--ds-spacing-xs) !important; margin-bottom: var(--ds-spacing-xs) !important; }
+.my-sm { margin-top: var(--ds-spacing-sm) !important; margin-bottom: var(--ds-spacing-sm) !important; }
+.my-md { margin-top: var(--ds-spacing-md) !important; margin-bottom: var(--ds-spacing-md) !important; }
+.my-lg { margin-top: var(--ds-spacing-lg) !important; margin-bottom: var(--ds-spacing-lg) !important; }
+.my-xl { margin-top: var(--ds-spacing-xl) !important; margin-bottom: var(--ds-spacing-xl) !important; }
+
+// ============================================
+// 宽度工具类
+// ============================================
+
+.w-full { width: 100% !important; }
+.w-auto { width: auto !important; }
+.w-1\/2 { width: 50% !important; }
+.w-1\/3 { width: 33.333% !important; }
+.w-1\/4 { width: 25% !important; }
+
+// ============================================
+// 响应式布局
+// ============================================
+
+@media (max-width: 430px) {
+  .page-container {
+    max-width: 100%;
+  }
+  
+  .header-wrapper {
+    padding: 0 var(--ds-spacing-md);
+  }
+  
+  .page-main {
+    padding: var(--ds-spacing-sm);
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ============================================
+// 特殊布局
+// ============================================
+
+// 固定底部内容（为底部导航留空间）
+.content-with-footer {
+  padding-bottom: 70px;
+  min-height: calc(100vh - 64px);
+}
+
+// 全屏内容（无 header/footer）
+.content-fullscreen {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--ds-spacing-xl);
+}
+
+// 居中内容
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 64px - 50px);
+  padding: var(--ds-spacing-xl);
+}
+

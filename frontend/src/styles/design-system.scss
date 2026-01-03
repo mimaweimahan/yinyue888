@@ -1,0 +1,251 @@
+// ============================================
+// 设计系统主文件
+// 基于目标站点 app.youtube92s.com 的设计规范
+// ============================================
+
+@import './target-site-mapping.scss';
+@import './layout-system.scss';
+
+// ============================================
+// CSS 变量定义（供全局使用）
+// ============================================
+
+:root {
+  // 颜色变量
+  --ds-primary: #{$target-primary};
+  --ds-primary-light: #{$target-primary-light};
+  --ds-primary-bg: #{$target-primary-bg};
+  
+  --ds-secondary: #{$target-secondary};
+  --ds-secondary-dark: #{$target-secondary-dark};
+  
+  --ds-warning: #{$target-warning};
+  --ds-error: #{$target-error};
+  --ds-error-light: #{$target-error-light};
+  
+  --ds-bg-primary: #{$target-bg-primary};
+  --ds-bg-secondary: #{$target-bg-secondary};
+  --ds-bg-tertiary: #{$target-bg-tertiary};
+  --ds-bg-gray: #{$target-bg-gray};
+  
+  --ds-text-primary: #{$target-text-primary};
+  --ds-text-secondary: #{$target-text-secondary};
+  --ds-text-tertiary: #{$target-text-tertiary};
+  --ds-text-placeholder: #{$target-text-placeholder};
+  --ds-text-disabled: #{$target-text-disabled};
+  
+  --ds-border: #{$target-border};
+  --ds-border-light: #{$target-border-light};
+  
+  // 字体变量
+  --ds-font-family: #{$target-font-family};
+  --ds-font-size-base: #{$target-font-size-base};
+  --ds-font-weight-normal: #{$target-font-weight-normal};
+  --ds-font-weight-medium: #{$target-font-weight-medium};
+  --ds-font-weight-bold: #{$target-font-weight-bold};
+  --ds-line-height-normal: #{$target-line-height-normal};
+  
+  // 间距变量
+  --ds-spacing-xs: #{$target-spacing-xs};
+  --ds-spacing-sm: #{$target-spacing-sm};
+  --ds-spacing-md: #{$target-spacing-md};
+  --ds-spacing-lg: #{$target-spacing-lg};
+  --ds-spacing-xl: #{$target-spacing-xl};
+  --ds-spacing-2xl: #{$target-spacing-2xl};
+  
+  // 圆角变量
+  --ds-radius-sm: #{$target-radius-sm};
+  --ds-radius-md: #{$target-radius-md};
+  --ds-radius-lg: #{$target-radius-lg};
+  --ds-radius-xl: #{$target-radius-xl};
+  --ds-radius-button: #{$target-radius-button};
+  --ds-radius-input: #{$target-radius-input};
+  --ds-radius-card: #{$target-radius-card};
+  
+  // 阴影变量
+  --ds-shadow-sm: #{$target-shadow-sm};
+  --ds-shadow-md: #{$target-shadow-md};
+  --ds-shadow-lg: #{$target-shadow-lg};
+  --ds-shadow-button: #{$target-shadow-button};
+  --ds-shadow-card: #{$target-shadow-card};
+  
+  // 布局变量
+  --ds-container-width: #{$target-container-width};
+  
+  // 动画变量
+  --ds-duration-base: #{$target-duration-base};
+  --ds-ease-in-out: #{$target-ease-in-out};
+}
+
+// ============================================
+// 工具类
+// ============================================
+
+// 颜色工具类
+.ds-text-primary { color: var(--ds-text-primary) !important; }
+.ds-text-secondary { color: var(--ds-text-text-secondary) !important; }
+.ds-text-tertiary { color: var(--ds-text-tertiary) !important; }
+.ds-text-placeholder { color: var(--ds-text-placeholder) !important; }
+.ds-text-disabled { color: var(--ds-text-disabled) !important; }
+
+.ds-bg-primary { background-color: var(--ds-bg-primary) !important; }
+.ds-bg-secondary { background-color: var(--ds-bg-secondary) !important; }
+.ds-bg-tertiary { background-color: var(--ds-bg-tertiary) !important; }
+
+// 间距工具类
+.ds-p-xs { padding: var(--ds-spacing-xs) !important; }
+.ds-p-sm { padding: var(--ds-spacing-sm) !important; }
+.ds-p-md { padding: var(--ds-spacing-md) !important; }
+.ds-p-lg { padding: var(--ds-spacing-lg) !important; }
+.ds-p-xl { padding: var(--ds-spacing-xl) !important; }
+
+.ds-m-xs { margin: var(--ds-spacing-xs) !important; }
+.ds-m-sm { margin: var(--ds-spacing-sm) !important; }
+.ds-m-md { margin: var(--ds-spacing-md) !important; }
+.ds-m-lg { margin: var(--ds-spacing-lg) !important; }
+.ds-m-xl { margin: var(--ds-spacing-xl) !important; }
+
+// 圆角工具类
+.ds-rounded-sm { border-radius: var(--ds-radius-sm) !important; }
+.ds-rounded-md { border-radius: var(--ds-radius-md) !important; }
+.ds-rounded-lg { border-radius: var(--ds-radius-lg) !important; }
+.ds-rounded-xl { border-radius: var(--ds-radius-xl) !important; }
+.ds-rounded-full { border-radius: 50% !important; }
+
+// 阴影工具类
+.ds-shadow-sm { box-shadow: var(--ds-shadow-sm) !important; }
+.ds-shadow-md { box-shadow: var(--ds-shadow-md) !important; }
+.ds-shadow-lg { box-shadow: var(--ds-shadow-lg) !important; }
+
+// ============================================
+// 混入函数（Mixins）
+// ============================================
+
+// 按钮样式混入
+@mixin ds-button-base {
+  font-family: var(--ds-font-family);
+  font-weight: var(--ds-font-weight-medium);
+  border-radius: var(--ds-radius-button);
+  transition: all var(--ds-duration-base) var(--ds-ease-in-out);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+@mixin ds-button-primary {
+  @include ds-button-base;
+  background-color: var(--ds-primary);
+  color: var(--ds-bg-primary);
+  
+  &:hover:not(:disabled) {
+    background-color: darken($target-primary, 5%);
+  }
+  
+  &:active:not(:disabled) {
+    background-color: darken($target-primary, 10%);
+  }
+}
+
+@mixin ds-button-secondary {
+  @include ds-button-base;
+  background-color: var(--ds-secondary);
+  color: var(--ds-bg-primary);
+  
+  &:hover:not(:disabled) {
+    background-color: darken($target-secondary, 5%);
+  }
+}
+
+@mixin ds-button-outline {
+  @include ds-button-base;
+  background-color: transparent;
+  color: var(--ds-primary);
+  border: 1px solid var(--ds-primary);
+  
+  &:hover:not(:disabled) {
+    background-color: var(--ds-primary-bg);
+  }
+}
+
+// 输入框样式混入
+@mixin ds-input-base {
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-base);
+  line-height: var(--ds-line-height-normal);
+  color: var(--ds-text-primary);
+  background-color: var(--ds-bg-primary);
+  border: var(--ds-input-border-width) solid var(--ds-border);
+  border-radius: var(--ds-radius-input);
+  padding: 0 var(--ds-input-padding-x);
+  height: var(--ds-input-height);
+  transition: all var(--ds-duration-base) var(--ds-ease-in-out);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--ds-primary);
+    box-shadow: 0 0 0 2px rgba(17, 180, 17, 0.1);
+  }
+  
+  &::placeholder {
+    color: var(--ds-text-placeholder);
+  }
+  
+  &:disabled {
+    background-color: var(--ds-bg-secondary);
+    color: var(--ds-text-disabled);
+    cursor: not-allowed;
+  }
+}
+
+// 卡片样式混入
+@mixin ds-card-base {
+  background-color: var(--ds-bg-primary);
+  border-radius: var(--ds-radius-card);
+  padding: var(--ds-card-padding);
+  box-shadow: var(--ds-shadow-card);
+  transition: all var(--ds-duration-base) var(--ds-ease-in-out);
+}
+
+@mixin ds-card-hover {
+  &:hover {
+    box-shadow: var(--ds-shadow-lg);
+    transform: translateY(-2px);
+  }
+}
+
+// 文本样式混入
+@mixin ds-text-base {
+  font-family: var(--ds-font-family);
+  color: var(--ds-text-primary);
+  line-height: var(--ds-line-height-normal);
+}
+
+@mixin ds-text-heading {
+  @include ds-text-base;
+  font-weight: var(--ds-font-weight-bold);
+  color: var(--ds-text-primary);
+}
+
+// ============================================
+// 全局样式覆盖
+// ============================================
+
+body {
+  font-family: var(--ds-font-family);
+  font-size: var(--ds-font-size-base);
+  color: var(--ds-text-primary);
+  background-color: var(--ds-bg-primary);
+  line-height: var(--ds-line-height-normal);
+}
+
+#app {
+  max-width: var(--ds-container-width);
+  margin: 0 auto;
+  background-color: var(--ds-bg-primary);
+}
+

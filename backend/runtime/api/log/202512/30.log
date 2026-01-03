@@ -1,0 +1,20 @@
+[2025-12-30T11:29:32-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:29:35-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:29:42-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:29:47-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:29:53-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:29:54-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:31:14-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:51:20-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:51:29-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:51:51-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T11:51:55-05:00][error] [2]include(/www/wwwroot/tisktshop.com/vendor/composer/../../app/api/controller/Login.php): Failed to open stream: No such file or directory
+[2025-12-30T12:45:44-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:45:59-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:49:11-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:49:22-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:49:27-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:54:05-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T12:54:14-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value
+[2025-12-30T13:03:14-05:00][error] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'phone' cannot be null
+[2025-12-30T13:09:01-05:00][error] [10501]SQLSTATE[HY000]: General error: 1364 Field 'phone' doesn't have a default value

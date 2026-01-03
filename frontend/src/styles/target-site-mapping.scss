@@ -1,0 +1,249 @@
+// ============================================
+// 目标站点设计系统映射文件
+// 基于 app.youtube92s.com 提取结果
+// 创建时间: 2025-12-19
+// ============================================
+
+// ============================================
+// 颜色系统（基于所有页面合并分析）
+// ============================================
+
+// 主色调
+$target-primary: #11B411;           // 主色（绿色）
+$target-primary-light: #66BB6A;    // 主色浅色
+$target-primary-bg: #E1F8EE;        // 主色背景
+
+// 次要色
+$target-secondary: #007AFF;         // 次要色（蓝色）
+$target-secondary-alt: #007BFF;     // 次要色变体（统一使用 #007AFF）
+$target-secondary-dark: #337DFE;   // 次要色深色
+
+// 警告色
+$target-warning: #FF7900;          // 警告色（橙色）
+
+// 错误色
+$target-error: #EB0909;             // 错误色（红色）
+$target-error-light: #DE868F;      // 错误色浅色
+
+// 背景色
+$target-bg-primary: #FFFFFF;        // 主背景（白色）
+$target-bg-secondary: #FCFCFD;      // 次要背景（浅灰白）
+$target-bg-tertiary: #F7FBF8;      // 第三背景（浅绿白）
+$target-bg-gray: #EEEEEE;           // 灰色背景
+
+// 文字颜色
+$target-text-primary: #000000;      // 主文字（黑色）
+$target-text-secondary: #333333;   // 次要文字（深灰）
+$target-text-tertiary: #606266;    // 第三文字（中灰）
+$target-text-placeholder: #999999;  // 占位文字（浅灰）
+$target-text-disabled: #C0C4CC;    // 禁用文字（极浅灰）
+
+// 文字颜色变体
+$target-text-gray-1: #101010;       // 深灰文字
+$target-text-gray-2: #151515;       // 深灰文字
+$target-text-gray-3: #202020;       // 深灰文字
+$target-text-gray-4: #4B4B4B;       // 中灰文字
+$target-text-gray-5: #666666;       // 中灰文字
+$target-text-gray-6: #767676;       // 中灰文字
+$target-text-gray-7: #8B8B8B;       // 浅灰文字
+$target-text-gray-8: #ADADAD;       // 浅灰文字
+$target-text-gray-9: #AAAAAA;      // 浅灰文字
+
+// 边框颜色
+$target-border: #DCDFE6;            // 边框（浅灰）
+$target-border-light: #E4E7ED;      // 边框浅色
+
+// ============================================
+// 字体系统
+// ============================================
+
+// 字体族
+$target-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$target-font-family-fallback: sans-serif;
+$target-font-family-icon: uicon-iconfont, cuIcon, thoruiFont;
+$target-font-family-cn: SourceHanSansSC-bold, "Helvetica Neue", Helvetica, sans-serif;
+
+// 字体大小
+$target-font-size-xs: 11px;         // 极小
+$target-font-size-sm: 13px;         // 小
+$target-font-size-base: 14px;       // 基础
+$target-font-size-md: 15px;          // 中等
+$target-font-size-lg: 16px;          // 大
+$target-font-size-xl: 17px;          // 超大
+$target-font-size-2xl: 18px;         // 2倍
+$target-font-size-3xl: 20px;         // 3倍
+$target-font-size-4xl: 22px;         // 4倍
+$target-font-size-5xl: 25px;         // 5倍
+$target-font-size-6xl: 28px;         // 6倍
+$target-font-size-7xl: 30px;         // 7倍
+$target-font-size-8xl: 31px;         // 8倍
+
+// 字重
+$target-font-weight-normal: 400;     // 常规
+$target-font-weight-medium: 500;    // 中等
+$target-font-weight-bold: 700;      // 粗体
+
+// 行高
+$target-line-height-tight: 1.2;      // 紧密
+$target-line-height-normal: 1.5;    // 正常
+$target-line-height-relaxed: 1.75;  // 宽松
+
+// ============================================
+// 间距系统
+// ============================================
+
+// 基础间距（从小到大）
+$target-spacing-0: 0;
+$target-spacing-1: 2px;
+$target-spacing-2: 4px;
+$target-spacing-3: 5px;
+$target-spacing-4: 6px;
+$target-spacing-5: 7px;
+$target-spacing-6: 9px;
+$target-spacing-7: 10px;
+$target-spacing-8: 11px;
+$target-spacing-9: 13px;
+$target-spacing-10: 14px;
+$target-spacing-11: 15px;
+$target-spacing-12: 16px;
+$target-spacing-13: 17px;
+$target-spacing-14: 18px;
+$target-spacing-15: 19px;
+$target-spacing-16: 20px;
+$target-spacing-17: 22px;
+$target-spacing-18: 24px;
+$target-spacing-19: 26px;
+$target-spacing-20: 28px;
+$target-spacing-21: 30px;
+$target-spacing-22: 35px;
+$target-spacing-23: 38px;
+
+// 语义化间距
+$target-spacing-xs: $target-spacing-3;    // 极小间距（5px）
+$target-spacing-sm: $target-spacing-7;    // 小间距（10px）
+$target-spacing-md: $target-spacing-11;   // 中等间距（15px）
+$target-spacing-lg: $target-spacing-12;  // 大间距（16px）
+$target-spacing-xl: $target-spacing-16;   // 超大间距（20px）
+$target-spacing-2xl: $target-spacing-18;  // 2倍超大间距（24px）
+
+// ============================================
+// 圆角系统
+// ============================================
+
+// 基础圆角
+$target-radius-none: 0;
+$target-radius-xs: 3px;              // 极小圆角
+$target-radius-sm: 4px;               // 小圆角
+$target-radius-md: 5px;               // 中等圆角
+$target-radius-lg: 7px;               // 大圆角
+$target-radius-xl: 8px;               // 超大圆角
+$target-radius-2xl: 10px;             // 2倍超大圆角
+$target-radius-3xl: 11px;             // 3倍超大圆角
+$target-radius-4xl: 13px;             // 4倍超大圆角
+$target-radius-5xl: 15px;             // 5倍超大圆角
+$target-radius-6xl: 16px;             // 6倍超大圆角
+$target-radius-7xl: 20px;             // 7倍超大圆角
+$target-radius-8xl: 22px;             // 8倍超大圆角
+$target-radius-9xl: 25px;             // 9倍超大圆角
+
+// 圆形
+$target-radius-full: 50px;            // 圆形（小）
+$target-radius-circle: 126px;          // 圆形（中）
+$target-radius-circle-lg: 150px;       // 圆形（大）
+
+// 语义化圆角
+$target-radius-button: $target-radius-md;    // 按钮圆角（5px）
+$target-radius-input: $target-radius-sm;     // 输入框圆角（4px）
+$target-radius-card: $target-radius-xl;      // 卡片圆角（8px）
+$target-radius-card-lg: $target-radius-4xl;  // 大卡片圆角（13px）
+
+// ============================================
+// 阴影系统
+// ============================================
+
+// 基础阴影
+$target-shadow-sm: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+$target-shadow-md: rgba(0, 0, 0, 0.1) 0px 2px 12px 0px;
+$target-shadow-lg: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
+$target-shadow-top: rgba(0, 0, 0, 0.1) 0px -1px 5px 0px;  // 上阴影（底部导航）
+
+// 特殊阴影
+$target-shadow-double: rgba(0, 0, 0, 0.118) 0px 1px 6px 0px, rgba(0, 0, 0, 0.118) 0px 1px 4px 0px;  // 双层阴影
+$target-shadow-pink: rgba(244, 138, 169, 0.2) 0px 2px 17px 0.5px;  // 粉红色阴影
+
+// 语义化阴影
+$target-shadow-button: $target-shadow-sm;     // 按钮阴影
+$target-shadow-card: $target-shadow-md;      // 卡片阴影
+$target-shadow-nav: $target-shadow-top;      // 导航阴影
+
+// ============================================
+// 布局系统
+// ============================================
+
+// 容器宽度
+$target-container-width: 430.286px;  // 移动端容器宽度
+$target-container-max-width: none;   // 最大宽度（无限制）
+
+// 断点（如果需要响应式）
+$target-breakpoint-sm: 430px;        // 小屏幕
+$target-breakpoint-md: 768px;        // 中等屏幕
+$target-breakpoint-lg: 1024px;       // 大屏幕
+
+// ============================================
+// 动画系统
+// ============================================
+
+// 过渡时间
+$target-duration-fast: 150ms;
+$target-duration-base: 200ms;
+$target-duration-slow: 300ms;
+
+// 缓动函数
+$target-ease-in: cubic-bezier(0.4, 0, 1, 1);
+$target-ease-out: cubic-bezier(0, 0, 0.2, 1);
+$target-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ============================================
+// 组件特定变量
+// ============================================
+
+// 按钮
+$target-button-height-sm: 38px;
+$target-button-height-md: 46px;
+$target-button-height-lg: 55px;
+$target-button-padding-x: $target-spacing-16;
+$target-button-padding-y: $target-spacing-11;
+
+// 输入框
+$target-input-height: 45px;
+$target-input-padding-x: $target-spacing-12;
+$target-input-border-width: 1px;
+
+// 卡片
+$target-card-padding: $target-spacing-16;
+$target-card-border-width: 1px;
+
+// ============================================
+// 导出映射（供其他文件使用）
+// ============================================
+
+// CSS Modules 导出（供 JavaScript 使用）
+// 注意：:export 是 CSS Modules 的特殊语法，esbuild 可能会警告，但不影响功能
+:export {
+  primary: $target-primary;
+  secondary: $target-secondary;
+  warning: $target-warning;
+  error: $target-error;
+  bgPrimary: $target-bg-primary;
+  bgSecondary: $target-bg-secondary;
+  textPrimary: $target-text-primary;
+  textSecondary: $target-text-secondary;
+  // fontFamily 使用 camelCase 是正确的（JavaScript 对象格式）
+  // esbuild 的警告可以忽略，这是 CSS Modules 的标准语法
+  fontFamily: $target-font-family;
+  fontSizeBase: $target-font-size-base;
+  spacingMd: $target-spacing-md;
+  radiusMd: $target-radius-md;
+  shadowMd: $target-shadow-md;
+}
+

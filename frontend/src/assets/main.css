@@ -1,0 +1,89 @@
+@import './base.css';
+@import '../styles/design-system.scss';
+
+body{
+	background: var(--ds-bg-primary);
+}
+#app {
+ max-width: var(--ds-container-width);
+ margin: 0 auto;
+ padding: 0;
+ font-weight: normal;
+ font-family: var(--ds-font-family), TikTokText;
+ background: var(--ds-bg-primary);
+}
+
+
+.van-dialog{
+	border-radius: var(--ds-radius-card)!important;
+}
+.van-overlay{
+	background:rgba(0, 0, 0, .5)!important;
+}
+.van-dialog__message--has-title{
+	padding: var(--ds-spacing-xl) var(--ds-spacing-md)!important;
+	color: var(--ds-text-primary)!important;
+}
+.van-dialog__header{
+	color: var(--ds-bg-primary)!important;
+	padding: var(--ds-spacing-xl) 0!important;
+	background-color: var(--ds-text-primary)!important;
+	font-size: var(--ds-font-size-2xl)!important;
+}
+.color-red{ color: red;}
+.color-green{ color: green;}
+.van-button--theme {
+    color: var(--ds-bg-primary);
+    background: var(--ds-primary);
+    border: var(--van-button-border-width) solid var(--ds-primary);
+    border-radius: var(--ds-radius-button);
+    transition: all var(--ds-duration-base) var(--ds-ease-in-out);
+}
+
+.van-button--theme:hover:not(:disabled) {
+    background: darken(#11B411, 5%);
+}
+
+.van-button--black {
+    color: var(--ds-bg-primary);
+    background: var(--ds-text-primary);
+    border: 1px solid var(--ds-text-primary);
+    border-radius: var(--ds-radius-button);
+}
+
+.van-button--red {
+    color: var(--ds-bg-primary);
+    background: var(--ds-error);
+    border: var(--van-button-border-width) solid var(--ds-error);
+    border-radius: var(--ds-radius-button);
+}
+.u-table{
+	width: 100%;
+	border: 1px solid #000;
+	border-radius: 5px;
+	border-collapse: separate;
+	text-indent: initial;
+	border-spacing: 0;
+}
+.u-table-thead{
+	vertical-align: middle;
+	unicode-bidi: isolate;
+	border-color: inherit;
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+}
+.u-table-thead th{
+	color: #fff;
+	font-weight: bold;
+	padding: 15px 10px;
+}
+.u-table-tbody tr{
+	display: table-row;
+	align-items: center;
+	text-align: left;
+}
+.u-table-tbody td{ 
+	padding: 12px 10px;
+	border-bottom: 1px solid #000;
+}

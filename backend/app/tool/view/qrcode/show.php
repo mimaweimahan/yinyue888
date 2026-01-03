@@ -1,0 +1,1 @@
+<img src="{:url('view',array('data'=>$data,'f'=>$size))}" width="100%">
