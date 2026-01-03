@@ -1,27 +1,32 @@
-version: '3.8'
-
 services:
+  # 后端服务
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     volumes:
+      # 这里直接写死 yinyue888，防止变量为空导致 Recovery Mode
       - .:/workspaces/yinyue888
-    depends_on:
-      - db
-      - redis
+    # 保持容器常驻，方便你在终端手动安装 Swoole
+    stdin_open: true
+    tty: true
 
+  # 数据库服务
   db:
     image: mysql:8.0
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: yinyue_db
     ports:
       - "3306:3306"
 
+  # Redis 服务
   redis:
     image: redis:alpine
-    ports:
-      - "6379:6379"
+    restart: always
 
+  # Nginx 服务
   nginx:
     image: nginx:alpine
     ports:
