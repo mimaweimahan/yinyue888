@@ -1,0 +1,159 @@
+html, body {
+	background: #f9f9f9;
+}
+.page-container {
+	min-height: 600px
+}
+
+.page-dh {
+	width: 1200px;
+	margin: 70px auto 0 auto;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.page-dh span {
+	padding: 0 5px
+}
+
+.page-container .page-left {
+	background: transparent;
+	box-shadow: none;
+}
+
+.page-dh span {
+	color: #666;
+}
+
+.page-dh .iconfont {
+	font-size: 14px;
+	color: #666;
+}
+
+article {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	padding: 10px 20px
+}
+
+.article-title {
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: bold
+}
+
+.article-sub {
+	display: flex;
+	color: #666;
+	align-items: center;
+	font-size: 12px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}
+
+.article-sub dd {
+	margin-right: 15px
+}
+
+.article-sub dd .iconfont {
+	font-size: 14px;
+}
+.extend{
+	margin: 10px 0;
+	border: 1px #eee solid;
+	border-top: 5px #efac65 solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 14px;
+}
+.extend li{ display: block; color: #666; line-height: 32px; border-bottom: 1px dashed #eee;}
+.extend li:last-child{border-bottom: 0;}
+.description {
+	border: 1px solid #8ce6b0;
+	background-color: #edfff3;
+	border-radius: 4px;
+	padding: 5px 8px;
+	margin: 10px 0 10px;
+	color: #333333;
+	font-size: 16px;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+}
+
+.description em {
+	height: 28px;
+	background: #07C160;
+	border-radius: 4px;
+	padding: 0 8px;
+	color: #FFFFFF;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 30px;
+	margin-right: 5px;
+}
+
+.content {
+	color: #333;
+	font-size: 16px;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+}
+
+.content img {
+	max-width: 100%
+}
+.content video {
+	width: 100%;
+	height: auto;
+	outline: none;
+	background: #000;
+}
+.tips {
+	margin: 20px 0;
+	font-size: 12px;
+	color: #666;
+}
+
+.last-next {
+	margin: 10px 0;
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.last-next dt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.last-next dd {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: right;
+}
+
+.last-next dd div {
+	font-size: 14px;
+	line-height: 30px;
+	color: #666;
+}
+
+.recommend {
+	padding: 20px 5px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.recommend .head{ margin: 0 20px}
+.list-pic-card {
+	margin-top: 10px;
+}
+.list-pic-card li{ width: 30%; margin-left: 1.2%;}
