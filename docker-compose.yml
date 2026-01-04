@@ -33,7 +33,7 @@ services:
     container_name: yinyue-db
     environment:
       MYSQL_DATABASE: yinyue_db
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: yinyue_db
     networks:
       - yinyue-net
 
