@@ -1,6 +1,6 @@
 <?php
 $host = 'db';
-$user = 'root';
+$user = 'yinyue_db';
 $pass = 'yinyue_db';
 $db   = 'yinyue_db';
 
