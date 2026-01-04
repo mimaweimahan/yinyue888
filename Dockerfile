@@ -33,4 +33,4 @@ RUN curl -fSL https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin
 # RUN pecl install swoole
 
 # 设置工作目录
-WORKDIR /workspaces/yinyue888
+WORKDIR /var/www/html/yinyue888
