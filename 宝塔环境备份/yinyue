@@ -1,0 +1,7 @@
+Name:yinyue
+Ps:yinyue
+PHPTask@{"status": "save", "target_path": "/www/server/php/82/etc", "src_path": "php/82/etc", "id": 2, "verify": "PHP#82", "module_list": [{"name": "fileinfo", "msg": "\u82e5\u53ef\u7528\u5185\u5b58\u5c0f\u4e8e1G\uff0c\u53ef\u80fd\u4f1a\u5b89\u88c5\u4e0d\u4e0a"}, {"name": "opcache", "msg": "\u7528\u4e8e\u52a0\u901fPHP\u811a\u672c!"}, {"name": "imagemagick", "msg": "Imagick\u9ad8\u6027\u80fd\u56fe\u5f62\u5e93"}, {"name": "intl", "msg": "\u63d0\u4f9b\u56fd\u9645\u5316\u652f\u6301"}, {"name": "pdo_sqlsrv", "msg": "sql-server php_pdo\u6269\u5c55"}, {"name": "sqlsrv", "msg": "sql-server php\u6269\u5c55"}, {"name": "bz2", "msg": "php\u5b98\u65b9\u6269\u5c55"}], "title": "PHP-8.2.28\u7248\u672c", "version": "8.2.28"}
+NginxTask@{"status": "save", "id": 3, "verify": "WebServer", "title": "Nginx-1.26.3\u7248\u672c", "version": "1.26.3"}
+RedisTask@{"status": "save", "id": 4, "verify": "Redis", "title": "Redis-7.0.11\u7248\u672c", "version": "7.0.11"}
+MySQLTask@{"status": "save", "id": 5, "verify": "Mysql", "title": "MySQL-8.0.36\u7248\u672c", "version": "8.0.36"}
+PhpMyAdminTask@{"status": "save", "id": 6, "verify": "phpmyadmin", "title": "PHPMyAdmin-5.2\u7248\u672c", "version": "5.2"}

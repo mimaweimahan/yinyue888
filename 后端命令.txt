@@ -1,0 +1,7 @@
+
+docker-compose up -d
+
+
+docker exec -i yinyue-db mysql -u root -pyinyue_db yinyue_db < 123.sql
+
+
